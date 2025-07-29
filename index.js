@@ -24,7 +24,6 @@ app.post('/bfhl', (req, res) => {
 
     dataArray.forEach((item) => {
         if (/^\d+$/.test(item)) {
-            // It's a whole number (only digits)
             let num = parseInt(item);
             if (num % 2 === 0) {
                 even_numbers.push(item);
@@ -33,16 +32,12 @@ app.post('/bfhl', (req, res) => {
             }
             sum += num;
         } else if (/^[a-zA-Z]+$/.test(item)) {
-            // Alphabetic string
             alphabets.push(item.toUpperCase());
             concatAlpha += item;
         } else {
-            // Special characters or mixed items
             special_characters.push(item);
         }
     });
-
-    // Create reversed string with alternating caps
     const reversedConcat = concatAlpha.split('').reverse().map((ch, i) => {
         return i % 2 === 0 ? ch.toUpperCase() : ch.toLowerCase();
     }).join('');
