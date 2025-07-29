@@ -44,9 +44,9 @@ app.post('/bfhl', (req, res) => {
 
     const response = {
         is_success: true,
-        user_id: "john_doe_17091999",
-        email: "john@xyz.com",
-        roll_number: "ABCD123",
+        user_id: "mannatpal",
+        email: "mannat1888.be22@chitkara.edu.in",
+        roll_number: "2210991888",
         odd_numbers,
         even_numbers,
         alphabets,
